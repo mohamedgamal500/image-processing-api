@@ -7,8 +7,8 @@
     "test": "npx tsc && jasmine",
     "start:dev": "nodemon --watch './**/*.ts' --exec 'ts-node' ./src/index.ts",
     "clean": "rimraf build/",
-    "build": "yarn clean && npx tsc",
-    "start:prod": "npm run build && nodemon build/index.js",
+    "build": "npm run clean && npx tsc",
+    "start:production": "npm run build && nodemon build/index.js",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix"
