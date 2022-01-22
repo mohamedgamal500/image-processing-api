@@ -5,8 +5,14 @@ import app from '../index'
 const request = supertest(app)
 
 describe('Test endpoint response', () => {
-  it('test hello world endpoint', async () => {
-    const response = await request.get('/')
-    expect(response.status).toBe(200)
+  it('test image endpoint', async () => {
+    const positiveResponse = await request.get('/?imageName=icelandwaterfall&width=800&height=500')
+    expect(positiveResponse.status).toBe(200)
   })
+
+  it('test image endpoint', async () => {
+    const negativeResponse = await request.get('/?imageName=wrong&width=800&height=500')
+    expect(negativeResponse.status).toBe(500)
+  })
+
 })

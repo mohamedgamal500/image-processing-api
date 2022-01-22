@@ -3,9 +3,7 @@ import logger from 'morgan'
 import { resizeImage } from './resizing'
 
 
-
-
-const PORT = 3000
+const PORT = 5000
 const app: Application = express()
 
 app.use(logger('dev'))
@@ -25,7 +23,8 @@ app.get('/', async (req: Request, res: Response) => {
     })
   }
   catch (err) {
-    console.log(err)
+    console.log('sharp error', err)
+    res.status(500)
     res.json({
       message: 'Failed'
     })
