@@ -22,7 +22,7 @@
 ### `/?imageName=<image_name>&width=<image_width>&height=<image_height>`
 
 ### Query parameters
-`imageName`.
+- `imageName`.
 Udacity Images
 1. `encenadaport`
 2. `fjord`
@@ -30,13 +30,13 @@ Udacity Images
 4. `palmtunnel`
 5. `santamonica`
 
-`width`.
-`height`. 
+- `width`.
+- `height`. 
 
 ### example
 
 app running at port 5000 
 
-*[http://localhost:5000/?imageName=palmtunnel&width=800&height=900]
+http://localhost:5000/?imageName=palmtunnel&width=800&height=900
 
 
