@@ -19,7 +19,8 @@ app.get('/', async (req: Request, res: Response) => {
     try {
       if (err) {
         console.log('No such thumb image')
-        await resizeImage(width, height, source, output)
+        const resultImage = await resizeImage(width, height, source, output)
+        console.log(":::::sharpResult", resultImage)
         fs.readFile(output, (error, imageContent) => {
           res.end(imageContent)
         })
