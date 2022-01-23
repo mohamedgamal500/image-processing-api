@@ -8,7 +8,7 @@ const app: Application = express()
 
 app.use(logger('dev'))
 
-app.get('/', async (req: Request, res: Response) => {
+app.get('/', (req: Request, res: Response): void => {
   const width: number = Number(req.query.width)
   const height: number = Number(req.query.height)
   const imageName: string = String(req.query.imageName)
@@ -20,7 +20,7 @@ app.get('/', async (req: Request, res: Response) => {
       if (err) {
         console.log('No such thumb image')
         const resultImage = await resizeImage(width, height, source, output)
-        console.log(":::::sharpResult", resultImage)
+        console.log(':::::sharpResult', resultImage)
         fs.readFile(output, (error, imageContent) => {
           res.end(imageContent)
         })

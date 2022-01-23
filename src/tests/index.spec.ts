@@ -16,9 +16,13 @@ describe('Test endpoint response', () => {
     expect(negativeResponse.status).toBe(500)
   })
 
-
   it('test sharp resizing', async () => {
-    const resultImage = await resizeImage(800, 900, `images/palmtunnel.jpg`, `thumbnails/palmtunnel_thumbnail_800X900.jpg`)
+    const resultImage = await resizeImage(
+      800,
+      900,
+      `images/palmtunnel.jpg`,
+      `thumbnails/palmtunnel_thumbnail_800X900.jpg`
+    )
     expect(resultImage.width).toBe(800)
   })
 })
