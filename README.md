@@ -10,10 +10,10 @@
 
 ### How to use the project
 
-1.`npm install` - init the node modules files.
-2.`npm run start:dev` - runing the server in development.
-3.`npm run start:production` - runing the server in production.
-4.`npm run test` - runing Jasmine Tests.
+1. `npm install` - init the node modules files.
+2. `npm run start:dev` - runing the server in development.
+3. `npm run start:production` - runing the server in production.
+4. `npm run test` - runing Jasmine Tests.
 
 
 
