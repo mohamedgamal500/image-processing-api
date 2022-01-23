@@ -14,5 +14,4 @@ describe('Test endpoint response', () => {
     const negativeResponse = await request.get('/?imageName=wrong&width=800&height=500')
     expect(negativeResponse.status).toBe(500)
   })
-
 })
