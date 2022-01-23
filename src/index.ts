@@ -10,9 +10,9 @@ app.use(logger('dev'))
 
 
 app.get('/', async (req: Request, res: Response) => {
-  const width: number = Number(req.query.width);
-  const height: number = Number(req.query.height);
-  const imageName: string = String(req.query.imageName);
+  const width: number = Number(req.query['width']);
+  const height: number = Number(req.query['height']);
+  const imageName: string = String(req.query['imageName']);
   const source: string = `images/${imageName}.jpg`
   const output: string = `thumbnails/${imageName}_thumbnail_${width}X${height}.jpg`
 
